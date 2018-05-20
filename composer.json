@@ -1,0 +1,25 @@
+{
+    "name": "aliabdulaziz/laravel-md-drawer",
+    "description": "This Laravel package provides a simple drawer-based front-end layout.",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Ali Abdulaziz",
+            "email": "ali_almancie@hotmail.com"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Aliabdulaziz\\LaravelMDDrawer\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Aliabdulaziz\\LaravelMDDrawer\\LaravelMDDrawerServiceProvider"
+            ]
+        }
+    }
+}

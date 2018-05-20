@@ -1,0 +1,100 @@
+// Fundemental
+.drawer {
+	display: none;
+	position: fixed;
+	background-color: rgba(0,0,0,0);
+	top: 0;
+	left: 0;
+	right: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 999999;
+}
+
+.drawer > .drawer-content {
+	max-width: 320px;
+	background-color: white;
+	height: 100%;
+	overflow: auto;
+}
+
+.drawer-left {
+	padding-right: 56px;
+}
+
+.drawer-left > .drawer-content {
+	margin-left: -320px;
+}
+
+.drawer-right {
+	padding-left: 56px;
+	direction: rtl;
+}
+
+.drawer-right > .drawer-content {
+	margin-right: -320px;
+	direction: ltr;
+}
+
+
+// Drawer Style
+.drawer-divider {
+	border-top: 1px solid #282D32;
+    border-bottom: 1px solid #424950;
+}
+
+.drawer-item {
+	display: none !important;
+}
+
+.drawer-content {
+	.not-drawer-item {
+		display: none !important;
+	}
+
+	.drawer-item {
+		display: block !important;
+	}
+
+	.nav-link {
+		padding: 10px 15px;
+	}
+
+	.drawer-label {
+		padding-left: 15px;
+		padding-right: 15px;
+		background-color: rgba(0,0,0,.2);
+		span {
+			display: table-cell;
+			height: 56px;
+			vertical-align: middle;
+		}
+		
+	}
+
+	.user-drawer-header {
+		padding: 15px;
+		background-color: rgba(0,0,0,.2);
+		color: #FAFAFA;
+	}
+}
+
+@include media-breakpoint-up(md) {
+	#drawer-navbar {
+		display: none;
+	}
+
+	#top-navbar {
+		display: flex;
+	}
+}
+
+@include media-breakpoint-down(md) { 
+	#top-navbar {
+		display: none;
+	}
+
+	#drawer-navbar {
+		display: flex;
+	}
+}
