@@ -28,10 +28,6 @@
                 <h6>{{ Auth::user()->email }}</h6>
             </div>
             <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="#">
-                Test
-            </a>
-            <div class="dropdown-divider"></div>
             <a class="dropdown-item" href="{{ route('logout') }}" 
                 onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
                 {{ __('Logout') }}
